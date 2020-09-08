@@ -73,4 +73,26 @@ $(function(){
         $(this).next(".sub-menu").slideToggle();
     });
 
+    //аккордеон в адаптиве для страницы команда
+    if( $(window).width() <= 500 ){
+        $(".staff-page .small-title").on("click", function(){
+            if( $(this).hasClass("active") ){
+                $(this).removeClass("active").next(".staff-page-wrapper").css("display", "none");
+            } else{
+                $(this).addClass("active").next(".staff-page-wrapper").css("display", "flex");
+            }            
+        });
+    }
+    $(window).resize(function(){
+        if( $(window).width() <= 500 ){
+            $(".staff-page .small-title").on("click", function(){
+                if( $(this).hasClass("active") ){
+                    $(this).removeClass("active").next(".staff-page-wrapper").css("display", "none");
+                } else{
+                    $(this).addClass("active").next(".staff-page-wrapper").css("display", "flex");
+                }                
+            });
+        }
+    });
+
 });

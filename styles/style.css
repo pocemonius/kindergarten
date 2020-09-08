@@ -1359,6 +1359,41 @@ table {
 		width: 180px;
 	}
 }
+@media(max-width: 500px){
+	.staff-page{
+		padding-top: 0px;
+	}
+	.staff-page .staff-page-wrapper{
+		display: none;
+		padding-top: 15px;
+	}
+	.staff-page .small-title{
+		font-size: 24px;
+		padding-top: 5px;
+		padding-bottom: 8px;
+	}
+	.staff-page .small-title span{
+		position: relative;
+		padding-right: 30px;
+	}
+	.staff-page .small-title span:after{
+		content: "";
+		display: block;
+		border-bottom: 2px solid #00a4d3;
+		border-right: 2px solid #00a4d3;
+		width: 10px;
+		height: 10px;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		transition: .3s;
+	}
+	.staff-page .small-title.active span:after{
+		transform: rotate(-135deg);
+		top: 15px;
+	}
+}
 @media(max-width: 440px){
 	.staff-page .staff-page-item .img-wrapper{
 		height: auto;
@@ -1389,6 +1424,9 @@ table {
 	max-width: 100%;
 	width: auto;
 	height: auto;
+	transition: .3s;
+	border-radius: 20px;
+	overflow: hidden;
 }
 .staff-detail-page .content{
 	width: calc(100% - 350px);
@@ -1447,3 +1485,74 @@ table {
 	}
 }
 /*staff detail page finish*/
+
+
+
+/*modal backcall start*/
+#modal{
+	
+}
+#modal .modal-wrapper{
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+	z-index: 999;
+	overflow: auto;
+}
+#modal .modal-inner{
+	position: relative;
+	background-color: #fff;
+    width: 100%;
+	max-width: 600px;
+	box-sizing: border-box;
+	margin: 200px auto 100px;
+	border-radius: 12px;
+	text-align: center;
+	padding: 30px 40px;
+}
+#modal .modal-inner .close{
+
+}
+#modal .modal-inner .title{
+	font-size: 32px;
+    padding-top: 0px;
+}
+#modal .modal-inner form{
+
+}
+#modal .modal-inner .field-wrapper{
+	display: flex;
+	padding-bottom: 15px;
+}
+#modal .modal-inner .field-wrapper .caption{
+	width: 200px;
+	box-sizing: border-box;
+	padding-right: 12px;
+	text-align: right;
+	font-size: 16px;
+	line-height: 30px;
+}
+#modal .modal-inner .field-wrapper input,
+#modal .modal-inner .field-wrapper textarea{
+	width: calc(100% - 200px);
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #00a4d3;
+    padding: 0px 6px;
+    height: 30px;
+    font-size: 16px;
+}
+#modal .modal-inner .field-wrapper textarea{
+	resize: none;
+    height: 110px;
+    padding: 4px 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+#modal .modal-inner .field-wrapper .submit{
+
+}
+/*modal backcall finish*/
