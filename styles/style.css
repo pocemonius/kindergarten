@@ -50,6 +50,17 @@ table {
 
 
 
+	
+html.no-scroll, body.no-scroll{
+	overflow: hidden;
+}
+body.no-scroll{
+	padding-right: 17px;;
+}
+body.no-scroll #scrollToTop{
+	right: 62px;
+}
+
 /*main styles start*/
 .content{
 	padding-top: 52px;
@@ -899,6 +910,32 @@ table {
 	top: 15px;
     left: 13px;
 }
+
+
+
+#callback{
+	position: fixed;
+	left: 45px;
+	bottom: 45px;
+	background-color: rgb(0, 164, 211);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	cursor: pointer;
+	transition: .5s;
+	background-image: url(../images/envelope.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 26px;
+}
+#callback:hover{
+	box-shadow: 0px 0px 5px rgb(0, 164, 211, .6);
+	background-color: #008BB2;
+}
+
+
+
 @media(max-width: 700px){
 	#scrollToTop{
 		right: 10px;
@@ -1490,7 +1527,7 @@ table {
 
 /*modal backcall start*/
 #modal{
-	
+	display: none;
 }
 #modal .modal-wrapper{
 	position: fixed;
@@ -1508,20 +1545,32 @@ table {
     width: 100%;
 	max-width: 600px;
 	box-sizing: border-box;
-	margin: 200px auto 100px;
+	margin: 120px auto 100px;
 	border-radius: 12px;
 	text-align: center;
 	padding: 30px 40px;
+	display: none;
 }
 #modal .modal-inner .close{
-
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 25px;
+	height: 25px;
+	background-image: url(../images/close-modal.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	cursor: pointer;
+	transform: rotate(0deg);
+	transition: .5s;
+}
+#modal .modal-inner .close:hover{
+	transform: rotate(180deg);
 }
 #modal .modal-inner .title{
 	font-size: 32px;
     padding-top: 0px;
-}
-#modal .modal-inner form{
-
 }
 #modal .modal-inner .field-wrapper{
 	display: flex;
@@ -1552,7 +1601,25 @@ table {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
-#modal .modal-inner .field-wrapper .submit{
-
+#modal .modal-inner .submit{
+	display: block;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+	background-color: #00A4D3;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 auto;
+    transition: .3s;
+    text-transform: uppercase;
+    outline: none;
+	border: none;
+	cursor: pointer;
 }
+#modal .modal-inner .submit:hover{
+	background-color: #008BB2;
+}
+
 /*modal backcall finish*/

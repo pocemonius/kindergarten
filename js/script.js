@@ -95,4 +95,27 @@ $(function(){
         }
     });
 
+
+    //модальное окно
+    $("#callback").on("click", function(){
+        $("#modal").show();
+        $("#modal .modal-inner").show();
+        $("html, body").addClass("no-scroll");
+    });
+
+    $("#modal .close").on("click", function(){
+        $("#modal").hide();  
+        $("#modal .modal-inner").hide();      
+        $("html, body").removeClass("no-scroll");
+    });
+
+    $(document).mouseup(function (e){ 
+		var div = $("#modal .modal-inner"); 
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $("#modal").hide();      
+            $("#modal .modal-inner").hide();  
+            $("html, body").removeClass("no-scroll");
+		}
+});
+
 });
