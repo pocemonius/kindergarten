@@ -99,7 +99,7 @@ $(function(){
     //модальное окно
     $("#callback").on("click", function(){
         $("#modal").show();
-        $("#modal .modal-inner").show();
+        $("#modal .modal-inner").fadeIn(500);
         $("html, body").addClass("no-scroll");
     });
 
