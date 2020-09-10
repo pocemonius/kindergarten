@@ -78,7 +78,7 @@ body.no-scroll #scrollToTop{
 .small-title{
 	font-family: 'Blogger', sans-serif;
     color: #00a4d3;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 500;
     line-height: normal;
     padding-top: 15px;
@@ -1522,6 +1522,125 @@ body.no-scroll #scrollToTop{
 	}
 }
 /*staff detail page finish*/
+
+
+/*documents page start*/
+.documents-page{
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+.documents-page .title{
+	text-align: center;
+}
+.documents-page .caption p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000;
+	padding-bottom: 12px;
+}
+.documents-page .documents-page-wrapper{
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.documents-page .documents-page-wrapper>a{
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000;
+	padding-bottom: 12px;
+	text-decoration: none;
+	min-height: 40px;
+}
+.documents-page .icon-wrapper{
+	width: 40px;
+	height: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-right: 10px;
+	transition: .2s;
+}
+.documents-page .document-name{
+	display: inline-flex;
+	align-items: center;
+	width: calc(100% - 50px);
+	transition: .2s;
+}
+.documents-page .documents-page-wrapper>a:hover .document-name{
+	color: #00a4d3;
+}
+.documents-page .documents-page-wrapper>a .icon-wrapper.pdf{
+	background-image: url(../images/pdf-icon-black.png);
+}
+.documents-page .documents-page-wrapper>a .icon-wrapper.word{
+	background-image: url(../images/word-icon-black.png);
+}
+.documents-page .documents-page-wrapper>a .icon-wrapper.excel{
+	background-image: url(../images/excel-icon-black.png);
+}
+.documents-page .documents-page-wrapper>a:hover .icon-wrapper.pdf{
+	background-image: url(../images/pdf-icon.png);
+}
+.documents-page .documents-page-wrapper>a:hover .icon-wrapper.word{
+	background-image: url(../images/word-icon.png);
+}
+.documents-page .documents-page-wrapper>a:hover .icon-wrapper.excel{
+	background-image: url(../images/excel-icon.png);
+}
+@media(max-width: 500px){
+	.documents-page{
+		padding-top: 0px;
+	}
+	.documents-page .documents-page-wrapper{
+		display: none;
+		padding-top: 15px;
+	}
+	.documents-page .small-title{
+		font-size: 24px;
+		padding-top: 5px;
+		padding-bottom: 8px;
+	}
+	.documents-page .small-title span{
+		position: relative;
+		padding-right: 30px;
+		display: block;
+	}
+	.documents-page .small-title span:after{
+		content: "";
+		display: block;
+		border-bottom: 2px solid #00a4d3;
+		border-right: 2px solid #00a4d3;
+		width: 10px;
+		height: 10px;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		transition: .3s;
+	}
+	.documents-page .small-title.active span:after{
+		transform: rotate(-135deg);
+		top: 15px;
+	}
+}
+
+
+
+
+
+
+/*documents page finish*/
+
+
+
+
+
 
 
 

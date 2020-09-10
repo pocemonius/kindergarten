@@ -95,6 +95,27 @@ $(function(){
         }
     });
 
+    //аккордеон в адаптиве для страницы документы
+    if( $(window).width() <= 500 ){
+        $(".documents-page .small-title").on("click", function(){
+            if( $(this).hasClass("active") ){
+                $(this).removeClass("active").next(".documents-page-wrapper").hide();
+            } else{
+                $(this).addClass("active").next(".documents-page-wrapper").show();
+            }            
+        });
+    }
+    $(window).resize(function(){
+        if( $(window).width() <= 500 ){
+            $(".documents-page .small-title").on("click", function(){
+                if( $(this).hasClass("active") ){
+                    $(this).removeClass("active").next(".documents-page-wrapper").hide();
+                } else{
+                    $(this).addClass("active").next(".documents-page-wrapper").show();
+                }                
+            });
+        }
+    });
 
     //модальное окно
     $("#callback").on("click", function(){
