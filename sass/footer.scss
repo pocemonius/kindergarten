@@ -1,0 +1,97 @@
+.footer{
+	background-color: #fff;
+    padding-bottom: 40px;
+    .footer-top{
+        background-image: url(../images/bg-e.png);
+        background-repeat: repeat-x;
+        background-position: center bottom;
+        background-color: #00A4D3;
+        padding-top: 300px;
+    }
+    .content-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .col-left{
+        width: 40%;
+        >div{
+            padding-bottom: 12px;
+        }
+        .footer-title{
+            font-size: 16px;
+            font-weight: 700;
+            color: #00a4d3;
+            line-height: normal;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .content{
+            padding-top: 8px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            color: #000;
+            text-decoration: none;
+        }
+        a{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    .col-right{
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        .logo{
+            img{
+                max-width: 250px;
+            }
+        } 
+        .socials{
+            padding-top: 12px;
+            >a{
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 36px;
+                height: 36px;
+                display: inline-block;
+                margin-left: 12px;
+                transition: .5s;
+            }
+            .instagram{
+                background-image: url(../images/facebook.png);
+                &:hover{
+                    background-image: url(../images/facebook-dark.png);
+                }
+            }
+            .facebook{
+                background-image: url(../images/instagram.png);
+                &:hover{
+                    background-image: url(../images/instagram-dark.png);
+                }
+            }
+        }
+    }
+    .col-center{
+        width: 20%;
+        >a{
+            font-size: 16px;
+            font-weight: 500;
+            color: #00a4d3;
+            line-height: 26px;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            &:hover{
+                color: #008BB2;
+                text-decoration: underline;
+            }
+        }
+    }
+}

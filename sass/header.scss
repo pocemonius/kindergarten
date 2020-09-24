@@ -1,0 +1,148 @@
+.header{
+	background-color: $colorBlue;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+    z-index: 999;
+    a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 40px;
+        &:hover{
+            text-shadow: 0px 0px 3px rgba(255,255,255, 1);
+        }
+    }
+    .logo{
+        width: 250px;
+        height: 60px;
+        display: flex;
+        align-items: center;	
+        transition: .5s;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .header-inner{
+        width: calc(100% - 320px);
+    }
+    .content-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-top{
+        .phone{
+            margin-right: 40px;
+        }
+    } 
+    .menu{
+        >ul{
+            display: flex;
+            justify-content: space-between;
+            >li{
+                position: relative;
+                .sub-menu-trigger{
+                    display: none;
+                }
+                >a{
+                    text-transform: uppercase;
+                    display: block;
+                    height: 100%;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 1px;
+                        right: 50%;
+                        height: 3px;
+                        width: 0px;
+                        background-color: #fff;
+                        transition: .3s;
+                    }
+                    &:hover:before{
+                        width: 50%;	
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 1px;
+                        left: 50%;
+                        height: 3px;
+                        width: 0px;
+                        background-color: #fff;
+                        transition: .3s;
+                    }
+                    &:hover:after{
+                        width: 50%;
+                    }
+                }
+                .sub-menu{
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    border-radius: 15px;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 3px rgb(0,164,211), 0px 0px 5px rgb(255,255,255);
+                    z-index: 99;
+                    min-width: 180px;
+                    margin-left: -90px;
+                    box-sizing: border-box;
+                    display: none;
+                    >li{
+                        >a{
+                            color: #00A4D3;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            display: block;
+                            text-shadow: none;
+                        }
+                        &:hover>a{
+                            color: #fff;
+                            background-color: #00A4D3;
+                            box-shadow: 0px 0px ;
+                        }
+                        &:first-of-type>a{
+                            border-top-left-radius: 12px;
+                            border-top-right-radius: 12px;
+                        }
+                        &:last-of-type>a{
+                            border-bottom-left-radius: 12px;
+                            border-bottom-right-radius: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.fixed{
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+        .logo{
+            height: 40px;
+        }
+    }
+    .menu-toggle{
+        display: none;
+        width: 32px;
+        height: 32px;
+        background-image: url(../images/menu-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+    }
+    
+} 
+
+
+
+
