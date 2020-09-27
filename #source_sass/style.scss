@@ -1,0 +1,25 @@
+//миксины
+@mixin mw($width) {
+    @media (max-width: $width + 'px'){
+      @content
+    }
+};
+
+//переменные
+$ffBlogger: 'Blogger', sans-serif;
+$colorBlue: #00a4d3;
+$colorBlack: #000;
+
+//импорт
+@import "reset";
+@import "common";
+@import "header";
+@import "main";
+@import "footer";
+@import "news-page";
+@import "staff-page";
+@import "staff-detail-page";
+@import "documents-page";
+@import "groups-page";
+
+

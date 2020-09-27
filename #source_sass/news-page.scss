@@ -1,0 +1,104 @@
+.news-page{
+	padding-top: 40px;
+    padding-bottom: 60px;
+    .title{
+        padding-left: 12px;        
+        @include mw(650){
+            padding: 0px 0px 5px;
+        }
+    }
+    .news-item{
+        display: flex;
+        padding: 12px;
+        border-radius: 20px;
+        transition: .3s;
+        position: relative;
+        margin-bottom: 30px;
+        &:hover{
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+        .img-wrapper{
+            width: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+            img{
+                max-width: 100%;
+                width: auto;
+                @include mw(650){
+                    max-width: 100%;
+                }
+            }
+            @include mw(650){
+                width: 100%;
+            }
+        }
+        .news-content{
+            width: calc(100% - 250px);
+            padding-left: 30px;
+            box-sizing: border-box;
+            .date{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                color: #888;
+                padding-bottom: 10px;
+            }
+            .caption{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                color: $colorBlack;
+                padding-bottom: 12px;
+            }
+            @include mw(650){
+                padding-left: 0;
+                width: 100%;
+                padding-top: 12px;
+            }
+        }
+        .detail{
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+            color: $colorBlue;
+            text-decoration: none;
+            &:hover{	
+                border-bottom: 1px solid $colorBlue;
+            }
+        }
+        &:last-of-type{
+            @include mw(650){
+                border-bottom: none;
+            }
+        }
+        @include mw(650){
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+            border-bottom: 1px solid $colorBlue;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            box-shadow: none !important;
+        }
+    }
+    .show-more{
+        display: block;
+        width: 210px;
+        height: 50px;
+        border-radius: 8px;
+        background-color: $colorBlue;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        line-height: 50px;
+        text-decoration: none;
+        margin: 0 auto;
+        transition: .3s;
+        text-transform: uppercase;
+        &:hover{
+            background-color: #008BB2;
+        }
+    }
+}
+
+

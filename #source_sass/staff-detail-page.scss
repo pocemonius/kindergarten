@@ -1,0 +1,72 @@
+.staff-detail-page{
+	padding-top: 70px;
+    padding-bottom: 60px;
+    .staff-detail-wrapper{
+        display: flex;
+        @include mw(700){
+            flex-direction: column;
+        }
+    }
+    .img-wrapper{
+        width: 350px;
+        img{
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            transition: .3s;
+            border-radius: 20px;
+            overflow: hidden;
+            @include mw(700){
+                max-width: 100%;
+		        width: 350px;
+            }
+        }        
+        @include mw(700){
+            width: 100%;
+		    text-align: center;
+        }
+    }
+    .content{
+        width: calc(100% - 350px);
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-top: 15px;
+        .name{
+            text-align: center;
+            font-family: $ffBlogger;
+            color: $colorBlue;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: normal;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .appointment{
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $colorBlack;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+        .description{
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $colorBlack;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+        @include mw(700){
+            width: 100%;
+            padding-left: 0px;
+            padding-top: 15px;
+        }
+    }
+    @include mw(700){
+        padding-top: 40px;
+		padding-bottom: 40px;
+    }
+}
